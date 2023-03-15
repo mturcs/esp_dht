@@ -10,11 +10,12 @@ import { Router } from "@angular/router";
 export class LoginService {
   constructor(private http: HttpClient, private router: Router) {}
 
+  // tslint:disable-next-line:typedef
   login(username: string, password: string) {
     return this.http
       .post<any>(environment.apiEndpoint + "/user/authenticate", {
-        username: username,
-        password: password
+        username,
+        password
       })
       .pipe(
         map((user) => {

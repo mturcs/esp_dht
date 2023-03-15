@@ -1,6 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+      <div class="main-title">
+        <div class="col-lg-4 col-md-8 mx-auto">
+          <div style="font-family: 'Courier 10 Pitch'; font-size: 40px; color: #f55d05">Intretech ANDON development
+            project
+            phase 0
+            <img src="./assets/under-construction90s-90s.gif" style="width:50px;height:50px;">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+
+      </div>
       <div class="row">
         <div class="col-lg-4 col-md-8 mx-auto">
           <div class="card">
@@ -10,18 +23,20 @@
               <form (submit)="login(loginForm)" novalidate autocomplete="off" [formGroup]="loginForm" class="row g-3">
                 <div class="col-sm-12 col-md-12">
                   <label>User Name</label>
-                  <input class="form-control" placeholder="Email" type="email" name="username" formControlName="userName" />
+                  <input class="form-control" placeholder="Email" type="email" name="username"
+                         formControlName="userName"/>
                 </div>
                 <div class="col-sm-12 col-md-12">
                   <label>Password</label>
-                  <input class="form-control" placeholder="******" type="password" name="password" formControlName="password" />
+                  <input class="form-control" placeholder="******" type="password" name="password"
+                         formControlName="password"/>
                 </div>
                 <div class="col-sm-12 col-md-12">
                   <!-- form-group// -->
 
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" name="rememberMe" formControlName="rememberMe" />
+                      <input type="checkbox" name="rememberMe" formControlName="rememberMe"/>
                       Remember me
                     </label>
                   </div>
@@ -31,7 +46,8 @@
 
                   <!-- form-group// -->
                   <div class="form-group">
-                    <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary btn-block">Login</button>
+                    <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary btn-block">Login
+                    </button>
                   </div>
                 </div>
                 <!-- form-group// -->
