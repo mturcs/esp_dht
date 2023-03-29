@@ -2,7 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { SharedModule } from "./shared/shared.module";
@@ -15,7 +15,8 @@ import { CoreModule } from "@core/core.module";
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule.forRoot(),
-    CoreModule.forRoot()
+    CoreModule.forRoot(),
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

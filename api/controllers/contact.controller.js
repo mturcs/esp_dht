@@ -1,9 +1,10 @@
 // contactController.js
+// eslint-disable-next-line
 // Import contact model
 Contact = require("../models/contact.model");
 
-exports.index = function (req, res) {
-  Contact.get(function (err, contacts) {
+exports.index = (req, res) => {
+  Contact.get((err, contacts) => {
     if (err) {
       res.json({
         status: "error",
@@ -19,8 +20,8 @@ exports.index = function (req, res) {
 };
 
 // Handle create user actions
-exports.new = function (req, res) {
-  Contact.find({ mobile: req.body.mobile.trim() }, function (err, contacts) {
+exports.new = (req, res) => {
+  Contact.find({ mobile: req.body.mobile.trim() }, (err, contacts) => {
     if (err) {
       res.json({
         status: "error",
@@ -33,6 +34,7 @@ exports.new = function (req, res) {
         message: req.body.firstName + " is already exist"
       });
     } else {
+      // eslint-disable-next-line
       var contact = new Contact();
       var contactObj = req.body;
       Object.keys(contactObj).forEach((key, index) => {
@@ -40,7 +42,8 @@ exports.new = function (req, res) {
       });
 
       // save the contact and check for errors
-      contact.save(function (err) {
+      // eslint-disable-next-line
+      contact.save(err => {
         if (err) {
           res.status(400).json({
             status: "error",
@@ -56,8 +59,8 @@ exports.new = function (req, res) {
   });
 
   // Handle view contact info
-  exports.view = function (req, res) {
-    Contact.findById(req.params.contact_id, function (err, contact) {
+  exports.view = (req, res) => {
+    Contact.findById(req.params.contact_id, (err, contact) => {
       if (err) {
         res.status(400).json({
           status: "error",
@@ -71,12 +74,12 @@ exports.new = function (req, res) {
     });
   };
   // Handle update contact info
-  exports.update = function (req, res) {
+  exports.update = (req, res) => {
     Contact.findByIdAndUpdate(
       req.params.contact_id,
       req.body,
       { new: true },
-      function (err, contact) {
+      (err, contact) => {
         if (err) {
           res.status(400).json({
             status: "error",
@@ -85,7 +88,7 @@ exports.new = function (req, res) {
         }
 
         // save the contact and check for errors
-        contact.save(function (err) {
+        contact.save(err => {
           if (err) res.json(err);
           res.json({
             message: "Contact Info updated",
@@ -96,12 +99,12 @@ exports.new = function (req, res) {
     );
   };
   // Handle delete state
-  exports.delete = function (req, res) {
+  exports.delete = (req, res) => {
     Contact.remove(
       {
         _id: req.params.contact_id
       },
-      function (err, state) {
+      (err, state) => {
         if (err) {
           res.status(400).json({
             status: "error",
@@ -117,8 +120,8 @@ exports.new = function (req, res) {
   };
 };
 // Handle view state info
-exports.view = function (req, res) {
-  Contact.findById(req.params.contact_id, function (err, contact) {
+exports.view = (req, res) => {
+  Contact.findById(req.params.contact_id, (err, contact) => {
     if (err) {
       res.status(400).json({
         status: "error",
@@ -132,12 +135,12 @@ exports.view = function (req, res) {
   });
 };
 // Handle update state info
-exports.update = function (req, res) {
+exports.update = (req, res) => {
   Contact.findByIdAndUpdate(
     req.params.contact_id,
     req.body,
     { new: true },
-    function (err, contact) {
+    (err, contact) => {
       if (err) {
         res.status(400).json({
           status: "error",
@@ -146,7 +149,7 @@ exports.update = function (req, res) {
       }
 
       // save the contact and check for errors
-      contact.save(function (err) {
+      contact.save(err => {
         if (err) res.json(err);
         res.json({
           message: "contact Info updated",
@@ -157,12 +160,12 @@ exports.update = function (req, res) {
   );
 };
 // Handle delete state
-exports.delete = function (req, res) {
+exports.delete = (req, res) => {
   Contact.remove(
     {
       _id: req.params.contact_id
     },
-    function (err, contact) {
+    (err, contact) => {
       if (err) {
         res.status(400).json({
           status: "error",

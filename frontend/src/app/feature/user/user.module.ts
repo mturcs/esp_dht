@@ -8,10 +8,11 @@ import { CoreModule } from "@core/core.module";
 import { SharedModule } from "@shared/shared.module";
 import { ProfileComponent } from "./profile/profile.component";
 import { HttpClientModule } from "@angular/common/http";
+import {MatSliderModule} from "@angular/material/slider";
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, HomeComponent, ProfileComponent],
-  imports: [UserRoutingModule, HttpClientModule, CoreModule.forRoot(), SharedModule.forRoot()],
+    imports: [UserRoutingModule, HttpClientModule, CoreModule.forRoot(), SharedModule.forRoot(), MatSliderModule],
   providers: [LoginService],
   bootstrap: []
 })

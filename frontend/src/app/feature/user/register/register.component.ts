@@ -3,7 +3,7 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms
 import { Router } from "@angular/router";
 import { ValidationService } from "@core/components/validation-errors/validation-messages.service";
 import { UserService } from "@core/services/user.service";
-import { ToastrService } from "ngx-toastr";
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({

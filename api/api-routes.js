@@ -1,7 +1,13 @@
 // Filename: api-routes.js
 // Initialize express router
 let router = require("express").Router();
+let cors = require('cors');
 // Set default API response
+// cors by tm
+router.use(cors());
+
+
+
 router.get("/", function(req, res) {
   res.json({
     status: "API Its Working",
