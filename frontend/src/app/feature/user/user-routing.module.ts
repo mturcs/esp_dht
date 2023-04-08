@@ -25,9 +25,11 @@ const userRoutes: Routes = [
     ]
   },
   { path: "login", component: LoginComponent },
-  { path: "register", component: RegisterComponent }
+  { path: "register", component: RegisterComponent },
+
 ];
 
+// @ts-ignore
 @NgModule({
   imports: [RouterModule.forChild(userRoutes)],
   exports: [RouterModule]

@@ -3,6 +3,8 @@ import { NgModule } from "@angular/core";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatCardModule} from '@angular/material/card';
+
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { SharedModule } from "./shared/shared.module";

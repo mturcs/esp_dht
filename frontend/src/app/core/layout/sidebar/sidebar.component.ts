@@ -1,9 +1,11 @@
 import { Component, OnInit, EventEmitter, Output } from "@angular/core";
+// @ts-ignore
 import { Router, NavigationEnd } from "@angular/router";
 import { LoginService } from "../../../feature/user/login/login.service";
 import { User } from "../../models/user.interface";
 import { UserService } from "../../services";
 
+// @ts-ignore
 @Component({
   selector: "app-sidebar",
   templateUrl: "./sidebar.component.html",

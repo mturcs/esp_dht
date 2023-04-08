@@ -7,9 +7,13 @@ import { LoginService } from "./login/login.service";
 import { CoreModule } from "@core/core.module";
 import { SharedModule } from "@shared/shared.module";
 import { ProfileComponent } from "./profile/profile.component";
+// @ts-ignore
 import { HttpClientModule } from "@angular/common/http";
+// @ts-ignore
 import {MatSliderModule} from "@angular/material/slider";
 
+
+// @ts-ignore
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, HomeComponent, ProfileComponent],
     imports: [UserRoutingModule, HttpClientModule, CoreModule.forRoot(), SharedModule.forRoot(), MatSliderModule],

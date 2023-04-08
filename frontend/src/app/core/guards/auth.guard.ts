@@ -8,12 +8,17 @@ import {
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router) {}
+  constructor(private router: Router ) {}
+
+
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (typeof window !== "undefined") {
       if (localStorage.getItem("currentUser")) {
         // logged in so return true
+        JSON.parse(localStorage.getItem("currentUser").valueOf())
+        console.log("current User",localStorage.getItem("currentUser").valueOf())
+        console.log("parse",JSON.parse(localStorage.getItem("currentUser").valueOf())["firstName"])
         return true;
       }
     }

@@ -1,5 +1,7 @@
+// @ts-ignore
 import { Component, OnInit } from '@angular/core';
 
+// @ts-ignore
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
