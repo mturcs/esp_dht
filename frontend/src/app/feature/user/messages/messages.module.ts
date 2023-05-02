@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MessagesRoutingModule } from './messages-routing.module';
 import { MessagesComponent } from './messages.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatChipsModule} from "@angular/material/chips";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import {MatCardModule} from "@angular/material/card";
   imports: [
     CommonModule,
     MessagesRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule,
+    MatIconModule
   ]
 })
 export class MessagesModule { }
